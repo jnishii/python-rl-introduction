@@ -12,7 +12,9 @@ Python3.6で動作確認しています。openAI gymのインストールも必�
 $ pip install gym
 ```
 
-この教材用の[Dockerイメージ](https://github.com/jnishii/docker-gym-nongpu)もあります。
+この教材用の[Dockerイメージ](https://github.com/jnishii/docker-gym-nongpu)もあります。Dockerのインストール方法はこのレポジトリの[Install-docker.md](Install-docker.md)や[Install-docker-mac.md](Install-docker-mac.md)を見てください。
+
+
 [Google Colaboratory](https://colab.research.google.com/)を使うのも手ですが，ログインのたびにopenAI gymのインストールが必要です。
 ```
 !pip install gym
