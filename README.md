@@ -7,7 +7,19 @@ Cは知っているけどPythonは知らない人が，手っ取り早く強化�
 
 ## Pythonの実行環境
 
-Python3.6で動作確認しています。この教材用の[Dockerイメージ](https://github.com/jnishii/docker-gym-nongpu)もあります。
+Python3.6で動作確認しています。openAI gymのインストールも必要です。
+```
+$ pip install gym
+```
+
+この教材用の[Dockerイメージ](https://github.com/jnishii/docker-gym-nongpu)もあります。
+[Google Colaboratory](https://colab.research.google.com/)を使うのも手ですが，ログインのたびにopenAI gymのインストールが必要です。
+```
+!pip install gym
+```	
+これで，openAI gymのテキストベースの環境は使えるようになりますが，[Classic Control](https://gym.openai.com/envs/#classic_control)や[Atari](https://gym.openai.com/envs/#atari)環境等を使うには，さらにアニメーション表示のためのライブラリも必要です。
+詳細は，[ColaboratoryでKeras-rl+OpenAI Gym (classical_control)](http://bcl.sci.yamaguchi-u.ac.jp/~jun/ja/blog/180828b-kerasrl-colaboratory)を参考にしてください。
+
 
 ## Pythonの教科書
 
