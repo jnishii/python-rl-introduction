@@ -4,24 +4,31 @@
 
 ## 環境構築(初回のみ)
 
+### 準備: Google Chromeのインストール
+
+ブラウザは**Google Chrome**を使うこと。他のブラウザでは， jupyter notebook
+動作に不都合が生じることがある。
+
+- Chromeのダウンロードは[こちら](https://www.google.com/intl/ja_ALL/chrome/)
+
 ### Dockerのインストール
 
-1. [Docker Store](https://store.docker.com/editions/community/docker-ce-desktop-mac)からDockerをダウンロードしてインストールする
-2. Dockerを起動する
+1. [Docker Store](https://store.docker.com/editions/community/docker-ce-desktop-mac)から"Docker Desktop for Mac"をダウンロードしてインストールする。この時dockerhubのアカウント作成が必要なので，無料アカウントを作成する(うっかりクレジットカード情報などを入力しないよう気をつけること)
+2. Docker Desktopを起動する
 3. ターミナルを開く
 4. 演習用Dockerイメージをダウンロードする
 ```
-$ docker pull jnishii/docker-gym-ple-nongpu
+$ docker pull jnishii/docker-gym-ple-nongpu36
 ```
 5. 以下をダウンロードして，docker-run.shという名前にする
 ```
-https://github.com/jnishii/docker-gym-ple-nongpu/tree/master/bin/docker-run.sh
+https://github.com/jnishii/docker-gym-ple-nongpu36/tree/master/bin/docker-run.sh
 ```
-6. 以下を実行していく。以下では， 作業ディレクトリを`~/python`とするが，他の名前でも良い。
+6. 以下を実行していく。以下では， 作業ディレクトリを`~/jupyter`とするが，他の名前でも良い。
 
 ```
-$ mkdir ~/pytyon
-$ cd  ~/python
+$ mkdir ~/jupyter
+$ cd  ~/jupyter
 $ mv ~/Downloads/docker-run.sh .   # docker-run.shのダウンロード先に応じてパス変更
 $ chmod 755 docker-run.sh　# 実行権限を付与
 ```
@@ -30,17 +37,19 @@ $ chmod 755 docker-run.sh　# 実行権限を付与
 
 ターミナル上で以下を実行
 ```
-$ docker pull jnishii/docker-gym-nongpu
+$ docker pull jnishii/docker-gym-nongpu36
 ```
+エラーが出る場合は以下の「学内から（proxyあり）の場合」と同様にしてDockerイメージの取得と読み込みを行う。
+
 
 ## [毎回利用時] Dockerを起動し，Jupyter notebookにアクセスする
 
 ### Dockerイメージの起動
 
-0. 編集したいファイルがあれば作業用ディレクトリ`~/python`においておく
+0. 編集したいファイルがあれば作業用ディレクトリ`~/jupyter`においておく
 1. 作業用ディレクトリに移動して以下を実行
 ```
-$ cd  ~/python
+$ cd  ~/jupyter
 $ ./docker-run.sh
 ```
 2. ターミナル上にURLが表示されていることを確認する。(以下の○の部分はいろいろな文字が入る)

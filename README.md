@@ -5,15 +5,30 @@ Cは知っているけどPythonは知らない人が，手っ取り早く強化�
 - jupyter notebookのワークシートになっています。
 - Pythonの基礎を勉強しながら[openAI gym](https://gym.openai.com/)に挑戦します。
 
+教材は2種類あります。
+
+- 1-frozenlake-cartpole
+	- pythonの基礎から初めて，openAIgymのfrozenlakeとcartpoleに挑戦します
+- 2-gridworld_nbgrader
+	- pythonの基礎から初めて，openAIgym準拠の[MDPGridworld](https://github.com/jnishii/gridworld-gym)に挑戦します
+	- pythonの基礎演習部分は， 1-frozenlake-cartpoleより若干多いです
+	- [nbgrader](https://nbgrader.readthedocs.io/)を使った自動採点機能がついています。ただし，自動採点部分は一部のみ公開しています。
+
+
 ## Pythonの実行環境
 
 Python3.6で動作確認しています。openAI gymのインストールも必要です。
 ```
 $ pip install gym
 ```
+ただし，教材`1-frozenlake-cartpole`ではjupyter notebookにアニメーションを表示出るようにする設定が，また，教材`2-gridworld_nbgrader`では，[MDPGridworld](https://github.com/jnishii/gridworld-gym)のインストールが必要です。面倒な方は，演習環境が整っている下記のDockerイメージをお使いください。
 
-この教材用の[Dockerイメージ](https://github.com/jnishii/docker-gym-nongpu)もあります。Dockerのインストール方法はこのレポジトリの[Install-docker.md](Install-docker.md)や[Install-docker-mac.md](Install-docker-mac.md)を見てください。
+### その1: Dockerを使う
 
+この教材用の[Dockerイメージ](https://github.com/jnishii/docker-gym-nongpu36)もあります。Dockerのインストール方法は[Install-docker.md](Install-docker.md)や[Install-docker-mac.md](Install-docker-mac.md)を見てください。
+
+
+### その2: Google Colaboratoryを使う
 
 [Google Colaboratory](https://colab.research.google.com/)を使うのも手ですが，ログインのたびにopenAI gymのインストールが必要です。
 ```
@@ -21,6 +36,8 @@ $ pip install gym
 ```	
 これで，openAI gymのテキストベースの環境は使えるようになりますが，[Classic Control](https://gym.openai.com/envs/#classic_control)や[Atari](https://gym.openai.com/envs/#atari)環境等を使うには，さらにアニメーション表示のためのライブラリも必要です。
 詳細は，[ColaboratoryでKeras-rl+OpenAI Gym (classical_control)](http://bcl.sci.yamaguchi-u.ac.jp/~jun/ja/blog/180828b-kerasrl-colaboratory)を参考にしてください。
+
+またこちらの方法では，教材`2-gridworld_nbgrader`では，[MDPGridworld](https://github.com/jnishii/gridworld-gym)を使うのは少し面倒になります。利用方法は[こちら](https://github.com/IRLL/reinforcement_learning_class/tree/master/gym)の，"Importing MDPGridworld class directly from your python code"を参考にしてください。
 
 
 ## Pythonの教科書
